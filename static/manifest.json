@@ -1,0 +1,17 @@
+{
+  "name": "CondoHub",
+  "description": "All-in-one platform for efficient, transparent, and stress-free condominium management",
+  "short_name": "CH",
+  "display": "standalone",
+  "start_url": "/",
+  "background_color": "#808080",
+  "theme_color": "#ff3f20",
+  "icons": [
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
