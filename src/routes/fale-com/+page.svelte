@@ -1,6 +1,7 @@
 <script lang="ts">
     const list = [
         {
+            chatId: '1',
             name: 'André Ferraz',
             description: 'Resident - Bl. 2, Ap. 201',
             lastMessageReceivedAt: '10:02 PM',
@@ -8,6 +9,7 @@
             avatar: 'A',
         },
         {
+            chatId: '2',
             name: 'Juliana Costa',
             description: 'Resident - Bl. 1, Ap. 104',
             lastMessageReceivedAt: '8:45 AM',
@@ -15,6 +17,7 @@
             avatar: 'J'
         },
         {
+            chatId: '3',
             name: 'Carlos Lima',
             description: 'Resident - Bl. 3, Ap. 307',
             lastMessageReceivedAt: '2:17 PM',
@@ -22,6 +25,7 @@
             avatar: 'C'
         },
         {
+            chatId: '4',
             name: 'Renata Oliveira',
             description: 'Resident - Bl. 4, Ap. 402',
             lastMessageReceivedAt: '6:33 PM',
@@ -29,6 +33,7 @@
             avatar: 'R'
         },
         {
+            chatId: '5',
             name: 'Felipe Souza',
             description: 'Resident - Bl. 5, Ap. 509',
             lastMessageReceivedAt: '11:20 AM',
@@ -36,6 +41,7 @@
             avatar: 'F'
         },
         {
+            chatId: '6',
             name: 'Mariana Duarte',
             description: 'Resident - Bl. 2, Ap. 208',
             lastMessageReceivedAt: '4:55 PM',
@@ -53,11 +59,11 @@
     {#each list as item}
         <div class="flex gap-2 p-2">
             <div class="w-[40px] h-[40px] bg-stone-300 rounded-full text-[18px] pt-[6px] text-center"></div>
-            <div class="grow flex flex-col justify-around">
+            <a class="grow flex flex-col justify-around" href="/fale-com/{item.chatId}">
                 <div class="leading-none font-bold">{item.name}</div>
                 <div class="leading-none">{item.description}</div>
-            </div>
-            <div class="flex flex-col items-end w-[55px]">
+            </a>
+            <a class="flex flex-col items-end w-[55px]" href="/fale-com/{item.chatId}">
                 <div class="text-xs w-full text-end">{item.lastMessageReceivedAt}</div>
                 <div class="grow flex items-center justify-center">
                     {#if item.newMessagesCount > 0}
@@ -66,7 +72,7 @@
                         </div>
                     {/if}
                 </div>
-            </div>
+            </a>
         </div>
     {/each}
 </div>
